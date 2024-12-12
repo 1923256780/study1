@@ -1,0 +1,243 @@
+ELF Header:
+  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           ARM
+  Version:                           0x1
+  Entry point address:               0x0
+  Start of program headers:          52 (bytes into file)
+  Start of section headers:          79576 (bytes into file)
+  Flags:                             0x5000200, Version5 EABI, soft-float ABI
+  Size of this header:               52 (bytes)
+  Size of program headers:           32 (bytes)
+  Number of program headers:         2
+  Size of section headers:           40 (bytes)
+  Number of section headers:         13
+  Section header string table index: 12
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .vectors          PROGBITS        00000000 010000 000040 00  AX  0   0 16
+  [ 2] .section_bk       PROGBITS        00000100 010100 000040 00  WA  0   0  4
+  [ 3] .text             PROGBITS        00000140 010140 0010f8 00  AX  0   0 16
+  [ 4] .rodata           PROGBITS        00001238 011238 0002ce 01 AMS  0   0  1
+  [ 5] .bss              NOBITS          00400020 020020 00043c 00  WA  0   0  4
+  [ 6] .stack            PROGBITS        0040045c 011506 001100 00      0   0  1
+  [ 7] .comment          PROGBITS        00000000 012606 00004d 01  MS  0   0  1
+  [ 8] .ARM.attributes   ARM_ATTRIBUTES  00000000 012653 000029 00      0   0  1
+  [ 9] .debug_frame      PROGBITS        00000000 01267c 000064 00      0   0  4
+  [10] .symtab           SYMTAB          00000000 0126e0 000a60 10     11 143  4
+  [11] .strtab           STRTAB          00000000 013140 000527 00      0   0  1
+  [12] .shstrtab         STRTAB          00000000 013667 000070 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  y (purecode), p (processor specific)
+
+There are no section groups in this file.
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  LOAD           0x010000 0x00000000 0x00000000 0x01506 0x01506 RWE 0x10000
+  LOAD           0x000020 0x00400020 0x00001508 0x00000 0x0043c RW  0x10000
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .vectors .section_bk .text .rodata 
+   01     .bss 
+
+There is no dynamic section in this file.
+
+There are no relocations in this file.
+
+There are no unwind sections in this file.
+
+Symbol table '.symtab' contains 166 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 00000000     0 SECTION LOCAL  DEFAULT    1 
+     2: 00000100     0 SECTION LOCAL  DEFAULT    2 
+     3: 00000140     0 SECTION LOCAL  DEFAULT    3 
+     4: 00001238     0 SECTION LOCAL  DEFAULT    4 
+     5: 00400020     0 SECTION LOCAL  DEFAULT    5 
+     6: 0040045c     0 SECTION LOCAL  DEFAULT    6 
+     7: 00000000     0 SECTION LOCAL  DEFAULT    7 
+     8: 00000000     0 SECTION LOCAL  DEFAULT    8 
+     9: 00000000     0 SECTION LOCAL  DEFAULT    9 
+    10: 00000000     0 FILE    LOCAL  DEFAULT  ABS build/app/startu[...]
+    11: 0040045c     0 NOTYPE  LOCAL  DEFAULT    6 $d
+    12: 00000000     0 NOTYPE  LOCAL  DEFAULT    1 _vector_start
+    13: 00000000     0 NOTYPE  LOCAL  DEFAULT    1 $a
+    14: 00000020     0 NOTYPE  LOCAL  DEFAULT    1 _undefined_handler
+    15: 00000024     0 NOTYPE  LOCAL  DEFAULT    1 _swi_handler
+    16: 00000028     0 NOTYPE  LOCAL  DEFAULT    1 _pabort_handler
+    17: 0000002c     0 NOTYPE  LOCAL  DEFAULT    1 _dabort_handler
+    18: 00000030     0 NOTYPE  LOCAL  DEFAULT    1 _reserved_handler
+    19: 00000034     0 NOTYPE  LOCAL  DEFAULT    1 _irq_handler
+    20: 00000038     0 NOTYPE  LOCAL  DEFAULT    1 _fiq_handler
+    21: 00000020     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    22: 00000000     0 FILE    LOCAL  DEFAULT  ABS 
+    23: 000003e5    64 FUNC    LOCAL  DEFAULT    3 get_flash_ID
+    24: 000003e4     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    25: 00000414     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    26: 00000424     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    27: 00000425   172 FUNC    LOCAL  DEFAULT    3 flash_write_sr
+    28: 000004a4     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    29: 000004d0     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    30: 000004d1    88 FUNC    LOCAL  DEFAULT    3 flash_wp_256k
+    31: 0000050c     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    32: 00000528     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    33: 00000529    84 FUNC    LOCAL  DEFAULT    3 flash_wp_ALL
+    34: 00000564     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    35: 0000057c     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    36: 0000057d    28 FUNC    LOCAL  DEFAULT    3 uart2_send_byte
+    37: 00000590     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    38: 00000598     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    39: 00000599    56 FUNC    LOCAL  DEFAULT    3 make_crc32_table[...]
+    40: 000005c8     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    41: 00400020  1024 OBJECT  LOCAL  DEFAULT    5 crc32_table
+    42: 000005d0     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    43: 000005d1    60 FUNC    LOCAL  DEFAULT    3 flash_erase_one_block
+    44: 00000608     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    45: 0000060c     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    46: 0000060d   136 FUNC    LOCAL  DEFAULT    3 flash_erase.isra.0
+    47: 00000684     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    48: 00000694     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    49: 00000695   116 FUNC    LOCAL  DEFAULT    3 flash_read_data.[...]
+    50: 00000700     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    51: 00000708     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    52: 00000709    92 FUNC    LOCAL  DEFAULT    3 calc_backup_sec_crc
+    53: 0000075c     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    54: 00000764     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    55: 00000765   256 FUNC    LOCAL  DEFAULT    3 flash_write.isra.0
+    56: 00000848     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    57: 00000864     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    58: 00000865   178 FUNC    LOCAL  DEFAULT    3 bim_printf
+    59: 00000918     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    60: 00000919   148 FUNC    LOCAL  DEFAULT    3 calc_image_sec_crc
+    61: 0000098c     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    62: 000009ac     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    63: 000009ad   120 FUNC    LOCAL  DEFAULT    3 bim_erase_backup_sec
+    64: 00000a10     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    65: 00000a24     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    66: 00000a25   144 FUNC    LOCAL  DEFAULT    3 bim_get_psec_ima[...]
+    67: 00000a80     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    68: 00000ab4     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    69: 00000dc8     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    70: 00000eac     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    71: 00001030     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    72: 00001074     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    73: 0000108c     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    74: 00001094     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    75: 0000109a     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    76: 000010a0     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    77: 000010a6     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    78: 000010ac     0 NOTYPE  LOCAL  DEFAULT    3 $a
+    79: 00400020     0 NOTYPE  LOCAL  DEFAULT    5 $d
+    80: 00400420     1 OBJECT  LOCAL  DEFAULT    5 flash_enable_era[...]
+    81: 00400420     0 NOTYPE  LOCAL  DEFAULT    5 $d
+    82: 00400421     1 OBJECT  LOCAL  DEFAULT    5 flash_enable_era[...]
+    83: 00400421     0 NOTYPE  LOCAL  DEFAULT    5 $d
+    84: 00400422     1 OBJECT  LOCAL  DEFAULT    5 flash_enable_wri[...]
+    85: 00400422     0 NOTYPE  LOCAL  DEFAULT    5 $d
+    86: 00400423     1 OBJECT  LOCAL  DEFAULT    5 flash_enable_wri[...]
+    87: 00400423     0 NOTYPE  LOCAL  DEFAULT    5 $d
+    88: 00400424     1 OBJECT  LOCAL  DEFAULT    5 flash_enable_wri[...]
+    89: 00400424     0 NOTYPE  LOCAL  DEFAULT    5 $d
+    90: 00400425     1 OBJECT  LOCAL  DEFAULT    5 flash_enable_wri[...]
+    91: 00400425     0 NOTYPE  LOCAL  DEFAULT    5 $d
+    92: 00400428     0 NOTYPE  LOCAL  DEFAULT    5 $d
+    93: 00400428     4 OBJECT  LOCAL  DEFAULT    5 flash_mid
+    94: 0040042c     0 NOTYPE  LOCAL  DEFAULT    5 $d
+    95: 0040042c    16 OBJECT  LOCAL  DEFAULT    5 hdr_back
+    96: 0040043c     0 NOTYPE  LOCAL  DEFAULT    5 $d
+    97: 0040043c    16 OBJECT  LOCAL  DEFAULT    5 hdr_back_part
+    98: 0040044c     0 NOTYPE  LOCAL  DEFAULT    5 $d
+    99: 0040044c    16 OBJECT  LOCAL  DEFAULT    5 hdr_img
+   100: 00000100     0 NOTYPE  LOCAL  DEFAULT    2 $d
+   101: 00000100    64 OBJECT  LOCAL  DEFAULT    2 BK36
+   102: 00000000     0 FILE    LOCAL  DEFAULT  ABS memcpy-stub.c
+   103: 000010b0     0 NOTYPE  LOCAL  DEFAULT    3 $t
+   104: 00000000     0 FILE    LOCAL  DEFAULT  ABS memset.c
+   105: 00001158     0 NOTYPE  LOCAL  DEFAULT    3 $t
+   106: 00000000     0 FILE    LOCAL  DEFAULT  ABS build/app/handle[...]
+   107: 0002e000     0 NOTYPE  LOCAL  DEFAULT  ABS SYSirq_FIQ_Handler
+   108: 0002e020     0 NOTYPE  LOCAL  DEFAULT  ABS SYSirq_IRQ_Handler
+   109: 00000140     0 NOTYPE  LOCAL  DEFAULT    3 $a
+   110: 000003b0     0 NOTYPE  LOCAL  DEFAULT    3 _STACK_SIZE_UND
+   111: 000003ac     0 NOTYPE  LOCAL  DEFAULT    3 _STACK_ADDR_UND
+   112: 000003a0     0 NOTYPE  LOCAL  DEFAULT    3 _STACK_SIZE_IRQ
+   113: 0000039c     0 NOTYPE  LOCAL  DEFAULT    3 _STACK_ADDR_IRQ
+   114: 00000398     0 NOTYPE  LOCAL  DEFAULT    3 _STACK_SIZE_FIQ
+   115: 00000394     0 NOTYPE  LOCAL  DEFAULT    3 _STACK_ADDR_FIQ
+   116: 000003a8     0 NOTYPE  LOCAL  DEFAULT    3 _STACK_SIZE_SVC
+   117: 000003a4     0 NOTYPE  LOCAL  DEFAULT    3 _STACK_ADDR_SVC
+   118: 000002d8     0 NOTYPE  LOCAL  DEFAULT    3 _data_init
+   119: 000002f8     0 NOTYPE  LOCAL  DEFAULT    3 _zi_init
+   120: 0002e020     0 NOTYPE  LOCAL  DEFAULT  ABS *ABS*0x2e020
+   121: 0002e000     0 NOTYPE  LOCAL  DEFAULT  ABS *ABS*0x2e000
+   122: 00000394     0 NOTYPE  LOCAL  DEFAULT    3 $d
+   123: 000003c0     0 NOTYPE  LOCAL  DEFAULT    3 $d
+   124: 00001238     0 NOTYPE  LOCAL  DEFAULT    4 $d
+   125: 00001262     0 NOTYPE  LOCAL  DEFAULT    4 $d
+   126: 00001294     0 NOTYPE  LOCAL  DEFAULT    4 $d
+   127: 00001324     0 NOTYPE  LOCAL  DEFAULT    4 $d
+   128: 00001209     8 FUNC    LOCAL  DEFAULT    3 ____disable_fiq_[...]
+   129: 00001208     0 NOTYPE  LOCAL  DEFAULT    3 $t
+   130: 0000120c     0 NOTYPE  LOCAL  DEFAULT    3 $a
+   131: 00001211     8 FUNC    LOCAL  DEFAULT    3 ____disable_irq_[...]
+   132: 00001210     0 NOTYPE  LOCAL  DEFAULT    3 $t
+   133: 00001214     0 NOTYPE  LOCAL  DEFAULT    3 $a
+   134: 00001218    12 FUNC    LOCAL  DEFAULT    3 __bim_main_from_arm
+   135: 00001218     0 NOTYPE  LOCAL  DEFAULT    3 $a
+   136: 00001220     0 NOTYPE  LOCAL  DEFAULT    3 $d
+   137: 00001225     8 FUNC    LOCAL  DEFAULT    3 ____enable_fiq_f[...]
+   138: 00001224     0 NOTYPE  LOCAL  DEFAULT    3 $t
+   139: 00001228     0 NOTYPE  LOCAL  DEFAULT    3 $a
+   140: 0000122d     8 FUNC    LOCAL  DEFAULT    3 ____enable_irq_f[...]
+   141: 0000122c     0 NOTYPE  LOCAL  DEFAULT    3 $t
+   142: 00001230     0 NOTYPE  LOCAL  DEFAULT    3 $a
+   143: 0000109b     6 FUNC    GLOBAL DEFAULT    3 PrefetchAbort_Ex[...]
+   144: 00400020     0 NOTYPE  GLOBAL DEFAULT    4 _data_addr_begin
+   145: 0000035c     0 FUNC    GLOBAL DEFAULT    3 __disable_irq
+   146: 000010a7     6 FUNC    GLOBAL DEFAULT    3 Reserved_Exception
+   147: 0000034c     0 FUNC    GLOBAL DEFAULT    3 __enable_irq
+   148: 000010b1   166 FUNC    GLOBAL DEFAULT    3 memcpy
+   149: 00400020     0 NOTYPE  GLOBAL DEFAULT    5 _bss_start
+   150: 0040045c     0 NOTYPE  GLOBAL DEFAULT    5 _bss_end
+   151: 0000033c     0 NOTYPE  GLOBAL DEFAULT    3 __fiq_handler
+   152: 00000380     0 FUNC    GLOBAL DEFAULT    3 __disable_fiq
+   153: 00000140     0 NOTYPE  GLOBAL DEFAULT    3 _reset_handler
+   154: 00000000     0 NOTYPE  GLOBAL DEFAULT  ABS _vector_start
+   155: 00001095     6 FUNC    GLOBAL DEFAULT    3 SoftwareInterrup[...]
+   156: 000010ac     4 FUNC    GLOBAL DEFAULT    3 Irq_Exception
+   157: 00001159   174 FUNC    GLOBAL DEFAULT    3 memset
+   158: 00000ab5  1472 FUNC    GLOBAL DEFAULT    3 bim_main
+   159: 00001508     0 NOTYPE  GLOBAL DEFAULT    5 _data_addr_end
+   160: 0000031c     0 NOTYPE  GLOBAL DEFAULT    3 __irq_handler
+   161: 00000370     0 FUNC    GLOBAL DEFAULT    3 __enable_fiq
+   162: 000010a1     6 FUNC    GLOBAL DEFAULT    3 DataAbort_Exception
+   163: 00001508     0 NOTYPE  GLOBAL DEFAULT    5 data_load_begin
+   164: 00001508     0 NOTYPE  GLOBAL DEFAULT  ABS _data_load_begin
+   165: 00001075    32 FUNC    GLOBAL DEFAULT    3 Undefined_Exception
+
+No version information found in this file.
+Attribute Section: aeabi
+File Attributes
+  Tag_CPU_name: "5TE"
+  Tag_CPU_arch: v5TE
+  Tag_ARM_ISA_use: Yes
+  Tag_THUMB_ISA_use: Thumb-1
+  Tag_ABI_PCS_wchar_t: 4
+  Tag_ABI_FP_denormal: Needed
+  Tag_ABI_FP_exceptions: Needed
+  Tag_ABI_FP_number_model: IEEE 754
+  Tag_ABI_align_needed: 8-byte
+  Tag_ABI_enum_size: small
+  Tag_ABI_optimization_goals: Aggressive Size
